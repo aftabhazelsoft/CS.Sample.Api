@@ -1,0 +1,11 @@
+﻿namespace CS.Sample.Api
+{
+    public class SystemUser
+    {
+        public int Id { get; set; }
+
+        public string FirstName { get; set; } = string.Empty;
+
+        public string LastName { get; set; } = string.Empty;
+    }
+}
