@@ -24,7 +24,7 @@ namespace CS.Sample.Api
             return Created("/", user);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             return Ok("Will be delted...");
