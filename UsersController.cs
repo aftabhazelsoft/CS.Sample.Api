@@ -23,5 +23,11 @@ namespace CS.Sample.Api
             _dbContext.SaveChanges();
             return Created("/", user);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            return Ok("Will be delted...");
+        }
     }
 }
