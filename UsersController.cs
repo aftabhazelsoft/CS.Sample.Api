@@ -28,7 +28,7 @@ namespace CS.Sample.Api
         public IActionResult Delete(int id)
         {
             // implement deletion logic here
-            return Ok($"{id}: Will be delted...");
+            return Ok($"Requested record with {id}: Will be deleted ...");
         }
     }
 }
