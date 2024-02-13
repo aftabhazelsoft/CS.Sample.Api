@@ -27,7 +27,8 @@ namespace CS.Sample.Api
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            // implement deletion logic here
+            var entity = _dbContext.SystemUsers.FirstOrDefault(x => x.Id == id);
+            _dbContext.Remove(entity);
             return Ok($"Requested record with {id}: Will be deleted ...");
         }
     }
