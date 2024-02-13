@@ -28,8 +28,11 @@ namespace CS.Sample.Api
         public IActionResult Delete(int id)
         {
             var entity = _dbContext.SystemUsers.FirstOrDefault(x => x.Id == id);
-            _dbContext.Remove(_entity);
-            return Ok($"Requested record with {id}: Will be deleted ...");
+            if (entity != null)
+            {
+                _dbContext.Remove(entity);
+            }
+            return Ok($"Requested record with {id}: Deleted!");
         }
     }
 }
